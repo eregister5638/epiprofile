@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.flex-container {
+  display: flex;
+  
+}
+
+.flex-container > div {
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+
+
+<div class="flex-container">
+  <div>
+<div id="sidebar-a">
+      <img src="https://www.wikipedia.org/portal/wikipedia.org/assets/img/Wikipedia-logo-v2@1.5x.png" alt="Logo" height="84" width="84">
+      <a href="#">Main Page</a>
+      <a href="#">Content</a>
+      <a href="#">Current events</a>
+      <a href="#">Random article</a>
+      <a href="#">About Epipedia</a>
+      <a href="#">Contact Us</a>
+      <a href="#">Donate</a>
+      <h1>Contribute </h1>
+      <a href="#">Help</a>
+      <a href="#">Learn to edit</a>
+      <a href="#">Community portal</a>
+      <a href="#">Recent changes</a>
+      <a href="#">Upload file</a>
+      <h2>Tools </h2>
+      <a href="#">What links here</a>
+      <a href="#">Related Changes</a>
+      <a href="#">Special pages</a>
+      <a href="#">Permanent link</a>
+      <a href="#">Page information</a>
+      <a href="#">Cite this page</a>
+      <a href="#">Epidata item</a>
+      <h3>Print/export </h3>
+      <a href="#">Download as PDF</a>
+      <a href="#">Printable version</a>
+      <h4>In other projects </h4>
+      <a href="#">Epimedia Commons</a>
+      <a href="#">Meta-Epi</a>
+      <a href="#">Epibooks</a>
+      <a href="#">Epinews</a>
+      <a href="#">Epiquote</a>
+      <a href="#">Epiversity</a>
+      <h5>Languages </h5>
+      <a href="#">English</a>
+      <a href="#">Spanish</a>
+      <a href="#">French</a>
+      <a href="#">Portuguese</a>
+
+      <style rel="stylesheet" type="text/css">
+
+
+#sidebar-a {
+  float: left;
+  width: 150px;
+  border-top: 1px dashed #EDF1F2;
+  background-color: #f8f9fa;
+  background-repeat: no-repeat;
+}
+
+#sidebar-a a{
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 12px;
+  display: block;
+  color: blue;
+
+}
+
+
+#sidebar-a h1, h2, h3, h4, h5{
+  border-bottom: 1px dotted #993333;
+  font-size: 12px;
+  font-weight: bold;
+  color: gray;
+}
+
+</style>
+
+
+</div>
+  </div>
+  <div>
+  	<div class="header">
+    <div class="headerbuttonsContainer">
+        <div>
+            <button class="headerArticleButton">Article</button>
+            <button class="headerTalkButton">Talk</button>
+        </div>
+        <div>
+             <button class="headerArticleButton">Read</button>
+             <button class="headerTalkButton">View source</button>
+             <button class="headerTalkButton">View history</button>
+             <input class="headerSearchBar" placeholder="Search Epipedia">
+        </div>
+   </div>
+</div>
+<style>
+  :root {
+    --main-bg-color: #f6f6f6; 
+    --border-color: #A2A9B1;
+    --title-font: 'Linux Libertine','Georgia','Times',serif;
+    --content-font: sans-serif;
+}
+
+/*
+:root {
+    --main-bg-color: coral; 
+    --border-color: navy;
+    --title-font: "Courier New", Courier, monospace;
+    --content-font: "Lucida Console", Monaco, monospace;
+}
+*/
+
+/*
+:root {
+    --main-bg-color: beige;
+    --border-color: #A2A9B1;
+    --title-font: Arial;
+    --content-font: Arial;
+}
+*/
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: var(--content-font);
+    background-color: var(--main-bg-color);
+    
+    width: 100%;
+    
+    transition: all 1s;
+}
+
+#main {
+    display: none;
+}
+
+#link {
+    width: 100%;
+}
+.btn {
+  padding: 1rem 2rem;  
+  background: #fff;
+  margin: 3rem auto;
+  display: block;
+  border: 1px solid #888;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  box-shadow: 2px 2px 10px #555;
+}
+
+#wapp {
+    width: 40px;
+    height: auto;
+    position: fixed;
+    top: 160px;
+    right: 10px;
+    z-index: 100;
+}
+
+#wrap {
+    position: relative;
+}
+
+img.ppic {
+    width: 100%;
+    height: auto;
+    
+    position: relative;
+    /*top: 100px;*/
+    z-index: -1;
+}
+
+.main-title {
+    display: inline-block;
+    position: relative;
+    z-index: 999;
+    background-color: var(--main-bg-color);    
+    box-sizing: border-box;
+    width: 100%;
+    
+    transition: all 1s;
+}
+
+#wrap h1 {
+    font-family: var(--title-font);
+    line-height: 1.3;
+    margin-bottom: 0.25em;
+    padding: 0;
+    border-bottom: 1px solid var(--border-color);
+    /*color: #fff;*/
+}
+
+#pname {
+    margin-top: 5px;
+}
+
+.main-contents {
+    
+    margin: 0;
+    padding: 10px;
+    z-index: 99;
+    background-color: var(--main-bg-color);
+
+}
+
+#origin {
+    display: block;
+    font-size: 0.82em;
+    color: #222222;
+    /*background: yellow;*/
+
+}
+
+
+
+.contents {
+    line-height: 1.6;
+    margin: 10px;
+}
+
+.para-contents {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    
+    font-size: 0.875em;   
+    line-height: inherit;
+}
+
+ol.list li {
+    font-size: 0.875em;
+}
+
+footer {
+    font-size: 0.8em;
+    width: 100%;
+    text-align: center;
+    margin: 10px auto;
+    padding-top: 10px;
+    border-top: 1px solid var(--border-color);
+}
+</style>
+
+
+
+
+
+
+
+
+<style>
+	.body {
+  // height: 4940px;
+  border: solid 1px #a7d7f9;
+  margin-top: 78px;
+  margin-right: 0px;
+  border-right: none;
+}
+.header {
+  border-bottom: solid 1px #a7d7f9;
+  display: block;
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 21%, rgba(0,0,0,0.03403359634869574) 100%); 
+}
+
+button {
+    padding:10px;
+}
+.headerbuttonsContainer {
+  display: flex;
+  justify-content : space-between;
+}
+.headerArticleButton {
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,0.21890754592852768) 0%, rgba(255,255,255,1) 100%); 
+  border-right: 1px solid #a7d7f9;
+  border-top: none;
+  border-left: none;
+  border-bottom: none;
+  color: black;
+  cursor: pointer;
+  font-size: 0.8125em;
+}
+.headerTalkButton {
+  background: rgb(167,215,249);
+  background: linear-gradient(180deg, rgba(167,215,249,0.03547356442577032) 9%, rgba(167,215,249,0.3744091386554622) 100%); 
+  border-right: 1px solid #a7d7f9;
+  border-top: none;
+  border-left: none;
+  border-bottom: none;
+  color: black;
+  cursor: pointer;
+}
+</style>
+
+<div id="wrap">
+            <img src="https://blog.qad.com/wp-content/uploads/2018/03/3.15.2018_Blog-min.jpg" class="ppic" />
+            <div class="main-contents">
+                <div class="main-title">
+                    <h1 id="pname">Epipedia of Taiichi Ohno</h1>
+                 </div>   
+                 
+                 <div id="origin">Epipedia, the free encyclopedia</div>
+
+                <div class="contents">
+                <p class="para-contents">Taiichi Ohno (大野耐一 Ōno Taiichi, February 29, 1912 – May 28, 1990) was a Japanese industrial engineer and businessman. He is considered to be the father of the Toyota Production System, which became Lean Manufacturing in the U.S. He devised the seven wastes (or muda in Japanese) as part of this system. He wrote several books about the system, including Toyota Production System: Beyond Large-Scale Production.</p>
+                </div>
+                
+                <div class="contents">
+                <p class="para-contents">Born in 1912 in Dalian, China, and a graduate of the Nagoya Technical High School (Japan), he joined the Toyoda family's Toyoda Spinning upon graduation in 1932 during the Great Depression thanks to the relations of his father to Kiichiro Toyoda, the son of Toyota's founding father Sakichi Toyoda.[1] He moved to the Toyota motor company in 1943 where he worked as a shop-floor supervisor in the engine manufacturing shop of the plant, and gradually rose through the ranks to become an executive. In what is considered to be a slight, possibly because he spoke publicly about the production system, he was denied the normal executive track and was sent instead to consult with suppliers in his later career.</p>
+                </div>    
+                
+                <div class="contents">
+                <p class="para-contents">Ohno's principles influenced areas outside of manufacturing, and have been extended into the service arena. For example, the field of sales process engineering has shown how the concept of Just In Time (JIT) can improve sales, marketing, and customer service processes.</p>
+                </div>
+                
+                <div class="contents">
+                <p class="para-contents">Ohno was also instrumental in developing the way organisations identify waste, with his "Seven Wastes" model which have become core in many academic approaches[citation needed]. These wastes are:</p>
+                </div>
+                
+                <div class="contents">
+                    <p class="para-contents">
+                        <ol class="list">
+                            <li>Delay, waiting or time spent in a queue with no value being added</li>
+                            <li>Producing more than you need</li>
+                            <li>Over processing or undertaking non-value added activity</li>
+                            <li>Transportation</li>
+                            <li>Unnecessary movement or motion</li>
+                            <li>Inventory</li>
+                            <li>Reduction of Defects</li>
+                        </ol>
+                    </p>
+                </div> 
+                
+                <div class="contents">
+                <p class="para-contents">Ohno is also known for his "Ten Precepts" to think and act to win.</p>
+                </div>                
+                
+                <div class="contents">
+                    <p class="para-contents">
+                        <ol class="list">
+                            <li>You are a cost. First reduce waste</li>
+                            <li>First say, "I can do it." And try before everything.</li>
+                            <li>The workplace is a teacher. You can find answers only in the workplace.</li>
+                            <li>Do anything immediately. Starting something right now is the only way to win.</li>
+                            <li>Once you start something, persevere with it. Do not give up until you finish it.</li>
+                            <li>Explain difficult things in an easy-to-understand manner. Repeat things that are easy to understand.</li>
+                            <li>Waste is hidden. Do not hide it. Make problems visible.</li>
+                            <li>Valueless motions are equal to shortening one's life.</li>
+                            <li>Re-improve what was improved for further improvement.</li>
+                            <li>Wisdom is given equally to everybody. The point is whether one can exercise it.</li>
+                        </ol>
+                    </p>
+                </div> 
+            </div>
+        <footer>For more infomation, please visit <a href="">Epipedia page</a></footer> 
+        </div>            
+
+        <style>
+  :root {
+    --main-bg-color: #f6f6f6; 
+    --border-color: #A2A9B1;
+    --title-font: 'Linux Libertine','Georgia','Times',serif;
+    --content-font: sans-serif;
+}
+
+/*
+:root {
+    --main-bg-color: coral; 
+    --border-color: navy;
+    --title-font: "Courier New", Courier, monospace;
+    --content-font: "Lucida Console", Monaco, monospace;
+}
+*/
+
+/*
+:root {
+    --main-bg-color: beige;
+    --border-color: #A2A9B1;
+    --title-font: Arial;
+    --content-font: Arial;
+}
+*/
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: var(--content-font);
+    background-color: var(--main-bg-color);
+    
+    width: 100%;
+    
+    transition: all 1s;
+}
+
+#main {
+    display: none;
+}
+
+#link {
+    width: 100%;
+}
+.btn {
+  padding: 1rem 2rem;  
+  background: #fff;
+  margin: 3rem auto;
+  display: block;
+  border: 1px solid #888;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  box-shadow: 2px 2px 10px #555;
+}
+
+#wapp {
+    width: 40px;
+    height: auto;
+    position: fixed;
+    top: 160px;
+    right: 10px;
+    z-index: 100;
+}
+
+#wrap {
+    position: relative;
+}
+
+img.ppic {
+    width: 100%;
+    height: auto;
+    
+    position: relative;
+    /*top: 100px;*/
+    z-index: -1;
+}
+
+.main-title {
+    display: inline-block;
+    position: relative;
+    z-index: 999;
+    background-color: var(--main-bg-color);    
+    box-sizing: border-box;
+    width: 100%;
+    
+    transition: all 1s;
+}
+
+#wrap h1 {
+    font-family: var(--title-font);
+    line-height: 1.3;
+    margin-bottom: 0.25em;
+    padding: 0;
+    border-bottom: 1px solid var(--border-color);
+    /*color: #fff;*/
+}
+
+#pname {
+    margin-top: 5px;
+}
+
+.main-contents {
+    
+    margin: 0;
+    padding: 10px;
+    z-index: 99;
+    background-color: var(--main-bg-color);
+
+}
+
+#origin {
+    display: block;
+    font-size: 0.82em;
+    color: #222222;
+    /*background: yellow;*/
+
+}
+
+
+
+.contents {
+    line-height: 1.6;
+    margin: 10px;
+}
+
+.para-contents {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    
+    font-size: 0.875em;   
+    line-height: inherit;
+}
+
+ol.list li {
+    font-size: 0.875em;
+}
+
+footer {
+    font-size: 0.8em;
+    width: 100%;
+    text-align: center;
+    margin: 10px auto;
+    padding-top: 10px;
+    border-top: 1px solid var(--border-color);
+}
+</style>
+
+
+
+
+
+  </div>
+</div>
+
+
+
+</body>
+</html>
+
+
